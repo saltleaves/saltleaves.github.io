@@ -74,7 +74,7 @@
 						<li>Links</li>
 						
 						
-						<li>A propos</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+						<a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 13.33px;">面试</a>
 					</div>
 				</section>
 				
@@ -188,6 +188,71 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-计算笛卡尔积" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/13/计算笛卡尔积/" class="article-date">
+  	<time datetime="2017-03-13T09:22:40.936Z" itemprop="datePublished">2017-03-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/13/计算笛卡尔积/">计算笛卡尔积</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="计算笛卡尔积-类数组"><a href="#计算笛卡尔积-类数组" class="headerlink" title="计算笛卡尔积(类数组)"></a>计算笛卡尔积(类数组)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cartesianProductOf</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.reduce.call(<span class="built_in">arguments</span>, <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> ret = [];</div><div class="line">    a.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">      b.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">b</span>) </span>&#123;</div><div class="line">        ret.push(a.concat([b]));</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">return</span> ret;</div><div class="line">  &#125;, [[]]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cartesianProductOf([<span class="string">'1'</span>,<span class="string">'3'</span>],[<span class="string">'a'</span>,<span class="string">'b'</span>])</div></pre></td></tr></table></figure>
+<p>结果：[[1,a],[1,b],[3,a],[3,b]]</p>
+<h3 id="计算笛卡尔积改写-数组"><a href="#计算笛卡尔积改写-数组" class="headerlink" title="计算笛卡尔积改写(数组)"></a>计算笛卡尔积改写(数组)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cartesianProductOf</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> array.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> ret = [];</div><div class="line">      a.forEach(<span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</div><div class="line">        b.forEach(<span class="function">(<span class="params">b</span>) =&gt;</span> &#123;</div><div class="line">          ret.push(a.concat([b]));</div><div class="line">        &#125;);</div><div class="line">      &#125;);</div><div class="line">      <span class="keyword">return</span> ret;</div><div class="line">    &#125;,[[]]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cartesianProductOf([[<span class="string">'1'</span>,<span class="string">'3'</span>],[<span class="string">'a'</span>,<span class="string">'b'</span>]])</div></pre></td></tr></table></figure>
+<p>结果：[[1,a],[1,b],[3,a],[3,b]]</p>
+<h3 id="计算笛卡尔积改写-字符串"><a href="#计算笛卡尔积改写-字符串" class="headerlink" title="计算笛卡尔积改写(字符串)"></a>计算笛卡尔积改写(字符串)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cartesianProductOf</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> array.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> ret = [];</div><div class="line">      a.forEach(<span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</div><div class="line">        b.forEach(<span class="function">(<span class="params">b</span>) =&gt;</span> &#123;</div><div class="line">          ret.push(a + <span class="string">'^'</span> + b);</div><div class="line">        &#125;);</div><div class="line">      &#125;);</div><div class="line">      <span class="keyword">return</span> ret;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用方法-2"><a href="#使用方法-2" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cartesianProductOf([[<span class="string">'1'</span>,<span class="string">'3'</span>],[<span class="string">'a'</span>,<span class="string">'b'</span>]])</div></pre></td></tr></table></figure>
+<p>结果：[“1^a”, “1^b”, “3^a”, “3^b”]</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-windows装srcapy" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -1085,92 +1150,6 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">x, y, a</span>) </span>&#123;</div><div class="line">    <span class="built_in">arguments</span>[<span class="number">2</span>] = <span class="number">10</span>;</div><div class="line">    alert(a);</div><div class="line">&#125;</div><div class="line">b(<span class="number">1</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure>
 <p>这时候因为没传递第三个参数a，所以赋值10以后，alert(a)的结果依然是undefined，而不是10，但如下代码弹出的结果依然是10，因为和a没有关系。</p>
 <h3 id="添加思考"><a href="#添加思考" class="headerlink" title="添加思考"></a>添加思考</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">x, y, a</span>) </span>&#123;</div><div class="line">    <span class="built_in">arguments</span>[<span class="number">2</span>] = <span class="number">10</span>;</div><div class="line">    alert(<span class="built_in">arguments</span>[<span class="number">2</span>]);</div><div class="line">&#125;</div><div class="line">b(<span class="number">1</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/13/js1/" class="article-date">
-  	<time datetime="2016-05-13T03:19:24.000Z" itemprop="datePublished">2016-05-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/13/js1/">js练习题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><blockquote>
-<ul>
-<li>有一定的js语言基础</li>
-<li>基础知识不稳固，容易混淆的人</li>
-</ul>
-</blockquote>
-<h2 id="题目讲解说明"><a href="#题目讲解说明" class="headerlink" title="题目讲解说明"></a>题目讲解说明</h2><p>接上篇<a href="http://leaves.miaoclub.cc/2016/05/12/js/" target="_blank" rel="external">js练习题</a>，由于是自己的理解，可能有些错误，欢迎指出：</p>
-<h2 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>,</div><div class="line">    b = <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">        x &amp;&amp; a(--x);</div><div class="line">    &#125;;</div><div class="line">alert(a);</div></pre></td></tr></table></figure>
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p>1</p>
-<h3 id="知识点说明"><a href="#知识点说明" class="headerlink" title="知识点说明"></a>知识点说明</h3><p>这个题目看起来比实际复杂，alert的结果是1；这里依然有3个重要的概念需要我们知道。</p>
-<ul>
-<li><p>上篇我们知道了变量声明在进入执行上下文就完成了，其实函数声明也是提前的，所有的函数声明都在执行代码之前都已经完成了声明，和变量声明一样。</p>
-</li>
-<li><p>函数声明和函数表达式的区别，澄清一下，函数声明是如下这样的代码：</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">functionName</span>(<span class="params">arg1, arg2</span>)</span>&#123;</div><div class="line">    <span class="comment">//函数体</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如下不是函数，而是函数表达式，相当于变量赋值(函数表达式没有提前，就相当于平时的变量赋值。)：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> functionName = <span class="function"><span class="keyword">function</span>(<span class="params">arg1, arg2</span>)</span>&#123;</div><div class="line">    <span class="comment">//函数体</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>函数声明会覆盖变量声明，但不会覆盖变量赋值，这个可能不好理解，我们来看个例子</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">value</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> value;</div><div class="line">alert(<span class="keyword">typeof</span> value);    <span class="comment">//"function"</span></div></pre></td></tr></table></figure>
-<p>尽快变量声明在下面定义，但是变量value依然是function，也就是说这种情况下，函数声明的优先级高于变量声明的优先级（函数的形参 &gt; 函数申明 &gt; 变量申明），但如果该变量value赋值了，那结果就完全不一样了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">value</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> value = <span class="number">1</span>;</div><div class="line">alert(<span class="keyword">typeof</span> value);    <span class="comment">//"number"</span></div></pre></td></tr></table></figure>
-<p>该value赋值以后，变量赋值初始化就覆盖了函数声明。</p>
-<h3 id="添加思考"><a href="#添加思考" class="headerlink" title="添加思考"></a>添加思考</h3><p>针对上面的举例，假如将alert(typeof value);改为alert(typeof value（）);答案将是，第一种情况，number，因为是返回的数字，第二种情况报错，因为value()不是一个方法。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>理解清楚内容后，可以更为理解的表达为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>,</div><div class="line">    b = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">        x &amp;&amp; b(--x);</div><div class="line">    &#125;;</div><div class="line">alert(a);</div></pre></td></tr></table></figure>
-<p>这个函数其实是一个有名函数表达式，函数表达式不像函数声明一样可以覆盖变量声明，但你可以注意到，变量b是包含了该函数表达式，而该函数表达式的名字是a；不同的浏览器对a这个名词处理有点不一样，在IE里，会将a认为函数声明，所以它被变量初始化覆盖了，就是说如果调用a(–x)的话就会出错，而其它浏览器在允许在函数内部调用a(–x)，因为这时候a在函数外面依然是数字。基本上，IE里调用b(2)的时候会出错，但其它浏览器则返回undefined。</p>
 
       
     </div>
