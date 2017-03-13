@@ -19,6 +19,27 @@ $ hexo n  //完整命令为hexo new,用于新建一篇文章
 ```
 ## 开始搭建
 以下为正常情况下的安装流程，假如出现跟说好的不一样的情况，最后会有一部分的问题解答。
+
+### 全局安装hexo 
+在任意的地方鼠标右键，打开git bash输入
+```
+$ npm install hexo-cli -g
+```
+如果出现警告：
+```
+npm WARN optional dep failed, continuing fsevents@0.3.8
+C:\Users\Administrator\AppData\Roaming\npm\hexo -> C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo-cli\bin\hexo
+hexo-cli@0.1.8 C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo-cli
+├── abbrev@1.0.7
+├── minimist@1.2.0
+├── bluebird@2.10.0
+├── tildify@1.1.0 (os-homedir@1.0.1)
+├── chalk@1.1.1 (escape-string-regexp@1.0.3, ansi-styles@2.1.0, supports-color@2.0.0, has-ansi@2.0.0, strip-ansi@3.0.0)
+└── hexo-fs@0.1.4 (escape-string-regexp@1.0.3, graceful-fs@4.1.2, chokidar@1.0.5)
+"Administrator" Sid: S-1-5-21-3933378558-1047124204-2037780362-500
+```
+请先清除npm 缓存，运行：npm cache clean
+
 ### 安装hexo 
 在任意的地方鼠标右键，打开git bash输入
 ```
