@@ -68,13 +68,13 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>Menu</li>
+						<li>菜单</li>
 						<li>Tags</li>
 						
-						<li>Links</li>
+						<li>友情链接</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -111,7 +111,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
 					</div>
 				</section>
 				
@@ -188,6 +188,79 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-js" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/12/js/" class="article-date">
+  	<time datetime="2016-05-12T15:24:58.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/js/">js练习题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><blockquote>
+<ul>
+<li>有一定的js语言基础</li>
+<li>基础知识不稳固，容易混淆的人</li>
+</ul>
+</blockquote>
+<h2 id="题目讲解说明"><a href="#题目讲解说明" class="headerlink" title="题目讲解说明"></a>题目讲解说明</h2><p>首先，下面的的代码均为摘抄，由于是自己的理解，可能有些错误，欢迎指出：</p>
+<h2 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (!(<span class="string">"a"</span> <span class="keyword">in</span> <span class="built_in">window</span>)) &#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">alert(a);</div></pre></td></tr></table></figure>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p>undefind</p>
+<h3 id="知识点说明"><a href="#知识点说明" class="headerlink" title="知识点说明"></a>知识点说明</h3><p>代码的理解好像是说，如果window不包含属性a,就声明一个变量a，然后赋值为1。其实这题主要是考了大家几个知识点</p>
+<ul>
+<li>所有的全局变量都是window的属性，语句 var a = 1;等价于window.a = 1; 你可以用（”变量名称” in window）的方式来检测全局变量是否声明。</li>
+<li>所有的变量声明都在范围作用域的顶部，这是因为JavaScript引擎首先会扫描所有的变量声明，然后将这些变量声明移动到顶部，就是所谓的变量声明被提升了，但是赋值并不会被提升。var a = 1,可以被分为两句话，变量声明：var a和变量赋值（初始化赋值）：a = 1。</li>
+<li>作用域：if并不会产生块级作用域，所以，a是一个全局变量</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在了解这些知识点后，这个题目就非常清楚了，相当于<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a;</div><div class="line"><span class="keyword">if</span> (!(<span class="string">"a"</span> <span class="keyword">in</span> <span class="built_in">window</span>)) &#123;</div><div class="line">    a = <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">alert(a);</div></pre></td></tr></table></figure></p>
+<p>首先，声明了a,然后判断a是否存在，不存在就赋值为1，很显然a是存在的，所以if判断为false,赋值永远不会执行，所以结果就是undefind。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-利用css模拟滚动条" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -314,6 +387,9 @@
 <h2 id="hexo基础命令讲解"><a href="#hexo基础命令讲解" class="headerlink" title="hexo基础命令讲解"></a>hexo基础命令讲解</h2><p>首先，下面的的代码将不再重复叙述，先把各个hexo 的基本命令介绍一下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo g  <span class="comment">//完整命令为hexo generate,用于生成静态文件</span></div><div class="line">$ hexo s  <span class="comment">//完整命令为hexo server,用于启动服务器，主要用来本地预览（localhost:4000）</span></div><div class="line">$ hexo d  <span class="comment">//完整命令为hexo deploy,用于将本地文件发布到github上</span></div><div class="line">$ hexo n  <span class="comment">//完整命令为hexo new,用于新建一篇文章</span></div></pre></td></tr></table></figure>
 <h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><p>以下为正常情况下的安装流程，假如出现跟说好的不一样的情况，最后会有一部分的问题解答。</p>
+<h3 id="全局安装hexo"><a href="#全局安装hexo" class="headerlink" title="全局安装hexo"></a>全局安装hexo</h3><p>在任意的地方鼠标右键，打开git bash输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<p>如果出现警告：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">npm WARN optional dep failed, continuing fsevents@0.3.8</div><div class="line">C:\Users\Administrator\AppData\Roaming\npm\hexo -&gt; C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo-cli\bin\hexo</div><div class="line">hexo-cli@0.1.8 C:\Users\Administrator\AppData\Roaming\npm\node_modules\hexo-cli</div><div class="line">├── abbrev@1.0.7</div><div class="line">├── minimist@1.2.0</div><div class="line">├── bluebird@2.10.0</div><div class="line">├── tildify@1.1.0 (os-homedir@1.0.1)</div><div class="line">├── chalk@1.1.1 (escape-string-regexp@1.0.3, ansi-styles@2.1.0, supports-color@2.0.0, has-ansi@2.0.0, strip-ansi@3.0.0)</div><div class="line">└── hexo-fs@0.1.4 (escape-string-regexp@1.0.3, graceful-fs@4.1.2, chokidar@1.0.5)</div><div class="line">&quot;Administrator&quot; Sid: S-1-5-21-3933378558-1047124204-2037780362-500</div></pre></td></tr></table></figure></p>
+<p>请先清除npm 缓存，运行：npm cache clean</p>
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在任意的地方鼠标右键，打开git bash输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
 <h3 id="下载网站所需文件"><a href="#下载网站所需文件" class="headerlink" title="下载网站所需文件"></a>下载网站所需文件</h3><p>创建放置博客文件的文件夹：hexo文件夹。在自己想要的位置创建文件夹，例如<strong>E:\hexo</strong>，当然最好不要放在中文路径下。之后进入文件夹，即<strong>E:\hexo</strong>内，点击鼠标右键，选择Git Bash，执行以下命令，Hexo会自动在该文件夹下下载搭建网站所需的所有文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
 <h3 id="下载依赖包"><a href="#下载依赖包" class="headerlink" title="下载依赖包"></a>下载依赖包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
