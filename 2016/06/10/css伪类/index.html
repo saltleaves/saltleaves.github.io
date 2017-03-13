@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>css伪类和伪元素 | saltleaves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="伪类和伪元素的概念w3c 对两者的定义：
+
+
+CSS 伪类用于向某些选择器添加特殊的效果。
+CSS 伪元素用于将特殊的效果添加到某些选择器。
+
+
+伪类和伪元素的区别这里用伪类 :first-child 和伪元素 :first-letter 来进行比较。12345678	p&amp;gt;i:first-child &amp;#123;		color: red	&amp;#125;//结构	&amp;lt;p&amp;gt;    	&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css伪类和伪元素">
+<meta property="og:url" content="http://yoursite.com/2016/06/10/css伪类/index.html">
+<meta property="og:site_name" content="saltleaves">
+<meta property="og:description" content="伪类和伪元素的概念w3c 对两者的定义：
+
+
+CSS 伪类用于向某些选择器添加特殊的效果。
+CSS 伪元素用于将特殊的效果添加到某些选择器。
+
+
+伪类和伪元素的区别这里用伪类 :first-child 和伪元素 :first-letter 来进行比较。12345678	p&amp;gt;i:first-child &amp;#123;		color: red	&amp;#125;//结构	&amp;lt;p&amp;gt;    	&amp;l">
+<meta property="og:updated_time" content="2017-03-13T07:46:46.854Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css伪类和伪元素">
+<meta name="twitter:description" content="伪类和伪元素的概念w3c 对两者的定义：
+
+
+CSS 伪类用于向某些选择器添加特殊的效果。
+CSS 伪元素用于将特殊的效果添加到某些选择器。
+
+
+伪类和伪元素的区别这里用伪类 :first-child 和伪元素 :first-letter 来进行比较。12345678	p&amp;gt;i:first-child &amp;#123;		color: red	&amp;#125;//结构	&amp;lt;p&amp;gt;    	&amp;l">
+  
+    <link rel="alternative" href="/atom.xml" title="saltleaves" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">saltleaves</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/essay">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ruolinxue.github.io/">kylin的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/home.html">阮一峰的个人网站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">saltleaves</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">saltleaves</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/essay">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-css伪类" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/10/css伪类/" class="article-date">
+  	<time datetime="2016-06-10T05:56:16.000Z" itemprop="datePublished">2016-06-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css伪类和伪元素
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="伪类和伪元素的概念"><a href="#伪类和伪元素的概念" class="headerlink" title="伪类和伪元素的概念"></a>伪类和伪元素的概念</h2><p>w3c 对两者的定义：</p>
+<blockquote>
+<ul>
+<li>CSS 伪类用于向某些选择器添加特殊的效果。</li>
+<li>CSS 伪元素用于将特殊的效果添加到某些选择器。</li>
+</ul>
+</blockquote>
+<h2 id="伪类和伪元素的区别"><a href="#伪类和伪元素的区别" class="headerlink" title="伪类和伪元素的区别"></a>伪类和伪元素的区别</h2><p>这里用伪类 :first-child 和伪元素 :first-letter 来进行比较。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	p&gt;i:first-child &#123;</div><div class="line">		color: red</div><div class="line">	&#125;</div><div class="line">//结构</div><div class="line">	&lt;p&gt;</div><div class="line">    	&lt;i&gt;first&lt;/i&gt;</div><div class="line">    	&lt;i&gt;second&lt;/i&gt;</div><div class="line">	&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>如果我们不使用伪类，而希望达到上述效果，可以这样做：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	.first-child &#123;</div><div class="line">		color: red</div><div class="line">	&#125;</div><div class="line">//结构</div><div class="line">	&lt;p&gt;</div><div class="line">    	&lt;i class=&quot;first-child&quot;&gt;first&lt;/i&gt;</div><div class="line">    	&lt;i&gt;second&lt;/i&gt;</div><div class="line">	&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>即我们给第一个子元素添加一个类，然后定义这个类的样式。那么我们接着看看为元素：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">	p:first-letter &#123;</div><div class="line">		color: red</div><div class="line">	&#125;</div><div class="line">//结构</div><div class="line">	&lt;p&gt;I am stephen lee.&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>那么如果我们不使用伪元素，要达到上述效果，应该怎么做呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">	.first-letter &#123;</div><div class="line">		color: red</div><div class="line">	&#125;</div><div class="line">//结构</div><div class="line">	&lt;p&gt;&lt;span class=&apos;first-letter&apos;&gt;I&lt;/span&gt; am stephen lee.&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<p>即我们给第一个字母添加一个 span，然后给 span 增加样式。<br>两者的区别已经出来了。那就是：</p>
+<blockquote>
+<ul>
+<li>伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到，这也是为什么他们一个称为伪类，一个称为伪元素的原因。</li>
+</ul>
+</blockquote>
+<h2 id="常见的伪类和伪元素说明"><a href="#常见的伪类和伪元素说明" class="headerlink" title="常见的伪类和伪元素说明"></a>常见的伪类和伪元素说明</h2><h3 id="锚伪类"><a href="#锚伪类" class="headerlink" title="锚伪类"></a>锚伪类</h3><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a:link</td>
+<td>未访问的链接    </td>
+</tr>
+<tr>
+<td>a:visited</td>
+<td>已访问的链接    </td>
+</tr>
+<tr>
+<td>a:hover</td>
+<td>鼠标移动到链接上,此伪类不止限于超链接上，其他元素也可使用   </td>
+</tr>
+<tr>
+<td>a:active</td>
+<td>选定的链接,被激活的元素，其他元素也使用</td>
+</tr>
+</tbody>
+</table>
+<p>注意：在 CSS 定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的；a:active 必须被置于 a:hover 之后，才是有效的；伪类名称对大小写不敏感。</p>
+<h3 id="其余伪类"><a href="#其余伪类" class="headerlink" title="其余伪类"></a>其余伪类</h3><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:focus</td>
+<td>向拥有键盘输入焦点的元素添加样式。</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>向元素的第一个子元素添加样式。</td>
+</tr>
+<tr>
+<td>:lang</td>
+<td>向带有指定 lang 属性的元素添加样式。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><p>CSS中，还有伪元素，形态及使用方法类同伪类。</p>
+<table>
+<thead>
+<tr>
+<th>伪元素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:first-letter</td>
+<td>向文本的第一个字母添加特殊样式。</td>
+</tr>
+<tr>
+<td>:first-line</td>
+<td>向文本的首行添加特殊样式。。</td>
+</tr>
+<tr>
+<td>:before</td>
+<td>在元素之前添加内容。</td>
+</tr>
+<tr>
+<td>:after</td>
+<td>在元素之后添加内容。</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/08/10/page/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          面试知识点：HTML5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/06/CSS制作气泡/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS制作气泡</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'saltleaves'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

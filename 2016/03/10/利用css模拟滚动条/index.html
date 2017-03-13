@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>利用css模拟滚动条 | saltleaves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="模拟滚动条 主要是好友看到我的博客的主题的模拟滚动条觉得不错，然后摘抄下来的，在这里做一下记录，就权当是笔记了。webkit支持拥有overflow属性的区域，列表框，下拉菜单，textarea的滚动条自定义样式，，不支持IE。
+webkit-scrollbar简介啥是滚动条滚动条是一个伪元素，可以自定义样式。这个伪类可以将webkit自身的滚动条渲染关闭，只按照用户自定义的css信息进行渲染。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用css模拟滚动条">
+<meta property="og:url" content="http://yoursite.com/2016/03/10/利用css模拟滚动条/index.html">
+<meta property="og:site_name" content="saltleaves">
+<meta property="og:description" content="模拟滚动条 主要是好友看到我的博客的主题的模拟滚动条觉得不错，然后摘抄下来的，在这里做一下记录，就权当是笔记了。webkit支持拥有overflow属性的区域，列表框，下拉菜单，textarea的滚动条自定义样式，，不支持IE。
+webkit-scrollbar简介啥是滚动条滚动条是一个伪元素，可以自定义样式。这个伪类可以将webkit自身的滚动条渲染关闭，只按照用户自定义的css信息进行渲染。">
+<meta property="og:updated_time" content="2017-03-13T07:46:46.892Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用css模拟滚动条">
+<meta name="twitter:description" content="模拟滚动条 主要是好友看到我的博客的主题的模拟滚动条觉得不错，然后摘抄下来的，在这里做一下记录，就权当是笔记了。webkit支持拥有overflow属性的区域，列表框，下拉菜单，textarea的滚动条自定义样式，，不支持IE。
+webkit-scrollbar简介啥是滚动条滚动条是一个伪元素，可以自定义样式。这个伪类可以将webkit自身的滚动条渲染关闭，只按照用户自定义的css信息进行渲染。">
+  
+    <link rel="alternative" href="/atom.xml" title="saltleaves" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">saltleaves</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/essay">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ruolinxue.github.io/">kylin的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/home.html">阮一峰的个人网站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">saltleaves</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">saltleaves</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/essay">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-利用css模拟滚动条" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/10/利用css模拟滚动条/" class="article-date">
+  	<time datetime="2016-03-10T12:08:02.000Z" itemprop="datePublished">2016-03-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      利用css模拟滚动条
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/摘抄/">摘抄</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模拟滚动条/">模拟滚动条</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="模拟滚动条"><a href="#模拟滚动条" class="headerlink" title="模拟滚动条"></a>模拟滚动条</h2><p> 主要是好友看到我的博客的主题的模拟滚动条觉得不错，然后摘抄下来的，在这里做一下记录，就权当是笔记了。webkit支持拥有overflow属性的区域，列表框，下拉菜单，textarea的滚动条自定义样式，，不支持IE。</p>
+<h2 id="webkit-scrollbar简介"><a href="#webkit-scrollbar简介" class="headerlink" title="webkit-scrollbar简介"></a>webkit-scrollbar简介</h2><h3 id="啥是滚动条"><a href="#啥是滚动条" class="headerlink" title="啥是滚动条"></a>啥是滚动条</h3><p>滚动条是一个伪元素，可以自定义样式。这个伪类可以将webkit自身的滚动条渲染关闭，只按照用户自定义的css信息进行渲染。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</div><div class="line">   <span class="attribute">width</span>: <span class="number">13px</span>;</div><div class="line">   <span class="attribute">height</span>: <span class="number">13px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例如上诉的代码所示，width和height属性分别表示纵向滚动条的宽度和横向滚动条的高。也可以指定为%百分比，在在这种情况下就代表了，滚动条占整个视窗的百分比</p>
+<h3 id="滚动条有啥"><a href="#滚动条有啥" class="headerlink" title="滚动条有啥"></a>滚动条有啥</h3><p>滚动条包括：滚动按钮和一个轨道。轨道本身又可以近一步被分为轨道碎片（track pieces）和一个滑块。轨道碎片指的是滑块上方和下面的区域。具体的细节如下：</p>
+<blockquote>
+<ul>
+<li>::-webkit-scrollbar 滚动条整体部分</li>
+<li>::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）</li>
+<li>::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）</li>
+<li>::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微 调小方块的位置。</li>
+<li>::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）</li>
+<li>::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处</li>
+<li>::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件</li>
+</ul>
+</blockquote>
+<h3 id="伪类的设置"><a href="#伪类的设置" class="headerlink" title="伪类的设置"></a>伪类的设置</h3><p>任何对象都可以设置：边框、阴影、背景图片等等，创建的滚动条任然会按照操作系统本身的设置来完成其交互的行为。</p>
+<blockquote>
+<ul>
+<li>:horizontal(horizontal伪类适用于任何水平方向上的滚动条)</li>
+<li>:vertical(vertical伪类适用于任何垂直方向的滚动条)</li>
+<li>:decrement(decrement伪类适用于按钮和轨道碎片。表示递减的按钮或轨道碎片，例如可以使区域向上或者向右移动的区域和按钮)</li>
+<li>:increment(increment伪类适用于按钮和轨道碎片。表示递增的按钮或轨道碎片，例如可以使区域向下或者向左移动的区域和按钮)</li>
+<li>:start(start伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的前面)</li>
+<li>:end(end伪类适用于按钮和轨道碎片。表示对象（按钮 轨道碎片）是否放在滑块的后面)</li>
+<li>:double-button(double-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一对按钮。也就是轨道碎片紧挨着一对在一起的按钮。)</li>
+<li>:single-button(single-button伪类适用于按钮和轨道碎片。判断轨道结束的位置是否是一个按钮。也就是轨道碎片紧挨着一个单独的按钮。)</li>
+<li>:no-button(no-button伪类表示轨道结束的位置没有按钮。)</li>
+<li>:corner-present(corner-present伪类表示滚动条的角落是否存在。)</li>
+<li>:window-inactive(适用于所有滚动条，表示包含滚动条的区域，焦点不在该窗口的时候。)</li>
+</ul>
+</blockquote>
+<h3 id="常用的特殊状态的设置"><a href="#常用的特殊状态的设置" class="headerlink" title="常用的特殊状态的设置"></a>常用的特殊状态的设置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-track-piece</span><span class="selector-pseudo">:start</span> &#123;</div><div class="line">   <span class="comment">/*滚动条上半边或左半边*/</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span><span class="selector-pseudo">:window-inactive</span> &#123;</div><div class="line">   <span class="comment">/*当焦点不在当前区域滑块的状态*/</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:horizontal</span><span class="selector-pseudo">:decrement</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">   <span class="comment">/*当鼠标在水平滚动条下面的按钮上的状态*/</span></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="本网站的滚动条代码示例"><a href="#本网站的滚动条代码示例" class="headerlink" title="本网站的滚动条代码示例"></a>本网站的滚动条代码示例</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:start</span><span class="selector-pseudo">:increment</span>,</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:end</span><span class="selector-pseudo">:decrement</span> &#123;</div><div class="line">  <span class="attribute">display</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-corner</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</div><div class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0,0,0,0.2);</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">8px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0,0,0,0.5);</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-track</span>,</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</div><div class="line">  <span class="attribute">border-right</span>: <span class="number">1px</span> solid transparent;</div><div class="line">  <span class="attribute">border-left</span>: <span class="number">1px</span> solid transparent;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-track</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0,0,0,0.15);</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:start</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat <span class="number">0</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:start</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat -<span class="number">15px</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:start</span><span class="selector-pseudo">:active</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat -<span class="number">30px</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:end</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat <span class="number">0</span> -<span class="number">18px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:end</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat -<span class="number">15px</span> -<span class="number">18px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-pseudo">::-webkit-scrollbar-button</span><span class="selector-pseudo">:end</span><span class="selector-pseudo">:active</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">"../img/scrollbar_arrow.png"</span>) no-repeat -<span class="number">30px</span> -<span class="number">18px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/12/js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          js练习题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/06/如何用hexo搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何用hexo搭建个人博客</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'saltleaves'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

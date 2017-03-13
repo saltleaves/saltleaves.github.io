@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>CSS制作气泡 | saltleaves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="制作气泡的效果图 
+制作方法说明首先，由于兼容的问题，没有使用伪类，可以使用伪类优化代码，首先我们需要知道一个三角形怎么完成。
+border属性说明首先我们来玩一下border这个属性，当我们把一个div的border-color设为不同值的时候，可以看到四边都成了一个梯形。
+1234567#test&amp;#123;	width:50px; 	height:50px; 	border-width:50">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS制作气泡">
+<meta property="og:url" content="http://yoursite.com/2016/06/06/CSS制作气泡/index.html">
+<meta property="og:site_name" content="saltleaves">
+<meta property="og:description" content="制作气泡的效果图 
+制作方法说明首先，由于兼容的问题，没有使用伪类，可以使用伪类优化代码，首先我们需要知道一个三角形怎么完成。
+border属性说明首先我们来玩一下border这个属性，当我们把一个div的border-color设为不同值的时候，可以看到四边都成了一个梯形。
+1234567#test&amp;#123;	width:50px; 	height:50px; 	border-width:50">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/qipao1.png">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/tixing.png">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/4-sanjiaoxing.png">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/1-sanjiaoxing.png">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/qipao2.png">
+<meta property="og:updated_time" content="2017-03-13T07:46:46.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS制作气泡">
+<meta name="twitter:description" content="制作气泡的效果图 
+制作方法说明首先，由于兼容的问题，没有使用伪类，可以使用伪类优化代码，首先我们需要知道一个三角形怎么完成。
+border属性说明首先我们来玩一下border这个属性，当我们把一个div的border-color设为不同值的时候，可以看到四边都成了一个梯形。
+1234567#test&amp;#123;	width:50px; 	height:50px; 	border-width:50">
+<meta name="twitter:image" content="http://7xrkml.com1.z0.glb.clouddn.com/qipao1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="saltleaves" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">saltleaves</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/essay">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ruolinxue.github.io/">kylin的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/home.html">阮一峰的个人网站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">saltleaves</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">saltleaves</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/essay">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-CSS制作气泡" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/06/CSS制作气泡/" class="article-date">
+  	<time datetime="2016-06-06T14:39:06.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS制作气泡
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="制作气泡的效果图"><a href="#制作气泡的效果图" class="headerlink" title="制作气泡的效果图"></a>制作气泡的效果图</h2><p> <img src="http://7xrkml.com1.z0.glb.clouddn.com/qipao1.png" alt="运行截图1"></p>
+<h2 id="制作方法说明"><a href="#制作方法说明" class="headerlink" title="制作方法说明"></a>制作方法说明</h2><p>首先，由于兼容的问题，没有使用伪类，可以使用伪类优化代码，首先我们需要知道一个三角形怎么完成。</p>
+<h3 id="border属性说明"><a href="#border属性说明" class="headerlink" title="border属性说明"></a>border属性说明</h3><p>首先我们来玩一下border这个属性，当我们把一个div的border-color设为不同值的时候，可以看到四边都成了一个梯形。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#test&#123;</div><div class="line">	width:50px; </div><div class="line">	height:50px; </div><div class="line">	border-width:50px; </div><div class="line">	border-style:solid; </div><div class="line">	border-color:#00ff00 #ff00ff #ff0000 #0000ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果图如下：<br><img src="http://7xrkml.com1.z0.glb.clouddn.com/tixing.png" alt="运行截图2"></p>
+<p>我们继续玩这个属性，可以想象，如果这个div没有宽高，那么应当是四个三角形。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#test&#123;</div><div class="line">	width:0; </div><div class="line">	height:0;</div><div class="line">	border-width:50px; </div><div class="line">	border-style:solid; </div><div class="line">	border-color:#00ff00 #ff00ff #ff0000 #0000ff;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://7xrkml.com1.z0.glb.clouddn.com/4-sanjiaoxing.png" alt="运行截图3"><br>结果果然如我们所料，那么可以想象，假如只有一条边有颜色，其余的边都为透明，就是一个三角形了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#test&#123;</div><div class="line">	 width:0; </div><div class="line">	 height:0; </div><div class="line">	 border-width:50px; </div><div class="line">	 border-style:solid; </div><div class="line">	 border-color:#ff00ff transparent transparent; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="http://7xrkml.com1.z0.glb.clouddn.com/1-sanjiaoxing.png" alt="运行截图4"><br>一个三角形已经画好了，而我们最终效果是一个镂空的三角形，所以，我们只要在叠加一个与背景色相同发的三角形即可。</p>
+<h3 id="兼容IE6"><a href="#兼容IE6" class="headerlink" title="兼容IE6"></a>兼容IE6</h3><p>在各大的主流浏览器中，测试上上诉的代码的，结果发现，IE6下存在两个问题</p>
+<ol>
+<li><p>上下边能形成三角形，左右两边仍然还是梯形</p>
+<blockquote>
+<ul>
+<li>解决方法：font-size和line-height都设为0的时候，div的四边在IE6下都能形成完美的三角形</li>
+</ul>
+</blockquote>
+</li>
+<li><p>IE6下transparent无效！其他三边被设置成默认的黑色了。</p>
+<blockquote>
+<ul>
+<li>解决方法：把border-style设置为dashed后，IE6下其他三边就能透明了！</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h3 id="最终代码实现"><a href="#最终代码实现" class="headerlink" title="最终代码实现"></a>最终代码实现</h3><p>为了更方便维护，代码结构有所改动。<br>css如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">.tag&#123; </div><div class="line">	width:300px; </div><div class="line">	padding: 20px;</div><div class="line">	border:5px solid #64A7D0; </div><div class="line">	position:relative; </div><div class="line">	background-color:#FFF;</div><div class="line">&#125;</div><div class="line">.arrow&#123; </div><div class="line">	position:absolute; </div><div class="line">	width:40px; </div><div class="line">	height:40px; </div><div class="line">	bottom:-40px; </div><div class="line">	left:100px; </div><div class="line">&#125;</div><div class="line">.arrow *&#123; </div><div class="line">	display:block; </div><div class="line">	border-width:20px; </div><div class="line">	position:absolute; </div><div class="line">	border-style:solid dashed dashed dashed; </div><div class="line">	font-size:0; </div><div class="line">	line-height:0; </div><div class="line">&#125;</div><div class="line">.arrow em&#123;</div><div class="line">	border-color:#64A7D0 transparent transparent;</div><div class="line">&#125;</div><div class="line">.arrow span&#123;</div><div class="line">	border-color:#FFF transparent transparent; top:-7px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>html:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;tag&quot;&gt;</div><div class="line">		&lt;div class=&quot;arrow&quot;&gt;</div><div class="line">    		&lt;em&gt;&lt;/em&gt;&lt;span&gt;&lt;/span&gt;</div><div class="line">   	&lt;/div&gt;</div><div class="line">   	CSS气泡框实现</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h3><p><img src="http://7xrkml.com1.z0.glb.clouddn.com/qipao2.png" alt="运行截图5"><br>那么如图所示的不规则三角形该怎么制作呢，也很简单，只需要稍微改动代码即可。页面结构不变。<br>css如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">.tag&#123; </div><div class="line">		width:300px;</div><div class="line">	 	height:100px;</div><div class="line">	 	position:relative; </div><div class="line">	 	background-color:#64A7D0;</div><div class="line">	 &#125;</div><div class="line">	.arrow&#123; </div><div class="line">		position:absolute; </div><div class="line">		width:70px; </div><div class="line">		height:60px; </div><div class="line">		left:-70px; </div><div class="line">		bottom:10px;</div><div class="line">	&#125;</div><div class="line">	.arrow *&#123; </div><div class="line">		display:block; </div><div class="line">		position:absolute; </div><div class="line">		border-style:dashed solid solid dashed; </div><div class="line">		font-size:0; </div><div class="line">		line-height:0; </div><div class="line">	&#125;</div><div class="line">	.arrow em&#123;</div><div class="line">		border-color:transparent #64A7D0 #64A7D0 transparent; </div><div class="line">		border-width:30px 35px;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	.arrow span&#123; </div><div class="line">		border-width:20px 35px;</div><div class="line">		border-color:transparent #FFF #FFF transparent; </div><div class="line">		bottom:0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="伪类制作"><a href="#伪类制作" class="headerlink" title="伪类制作"></a>伪类制作</h3><p>为了减少结构的冗余，我们可以使用CSS3的伪类来达到一样的效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">.tag&#123;</div><div class="line">    width:300px;</div><div class="line">    height:100px;</div><div class="line">    border:5px solid #09F;</div><div class="line">    position:relative;</div><div class="line">    background-color:#FFF;</div><div class="line">&#125;</div><div class="line">.tag:before,.tag:after&#123;</div><div class="line">    content:&quot;&quot;;display:block;</div><div class="line">    border-width:20px;</div><div class="line">    position:absolute; bottom:-40px;</div><div class="line">    left:100px;</div><div class="line">    border-style:solid dashed dashed;</div><div class="line">    border-color:#09F transparent transparent;</div><div class="line">    font-size:0;</div><div class="line">    line-height:0;</div><div class="line">&#125;</div><div class="line">.tag:after&#123;</div><div class="line">    bottom:-33px;</div><div class="line">    border-color:#FFF transparent transparent;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/10/css伪类/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          css伪类和伪元素
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/05/JS闭包/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS闭包</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'saltleaves'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

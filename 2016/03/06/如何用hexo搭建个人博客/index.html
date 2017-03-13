@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>如何用hexo搭建个人博客 | saltleaves</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="准备工作
+
+安装git:不会安装，请查看：window系统下如何安装git 
+安装node.js:官网下载安装
+托管代码的网站：github或者gitcafe(天朝本土化的github)
+
+
+hexo基础命令讲解首先，下面的的代码将不再重复叙述，先把各个hexo 的基本命令介绍一下：
+1234$ hexo g  //完整命令为hexo generate,用于生成静态文件$ hexo s  //完整">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用hexo搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2016/03/06/如何用hexo搭建个人博客/index.html">
+<meta property="og:site_name" content="saltleaves">
+<meta property="og:description" content="准备工作
+
+安装git:不会安装，请查看：window系统下如何安装git 
+安装node.js:官网下载安装
+托管代码的网站：github或者gitcafe(天朝本土化的github)
+
+
+hexo基础命令讲解首先，下面的的代码将不再重复叙述，先把各个hexo 的基本命令介绍一下：
+1234$ hexo g  //完整命令为hexo generate,用于生成静态文件$ hexo s  //完整">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160308215634.png">
+<meta property="og:image" content="http://7xrkml.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160308220147.png">
+<meta property="og:updated_time" content="2017-03-13T07:46:46.895Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何用hexo搭建个人博客">
+<meta name="twitter:description" content="准备工作
+
+安装git:不会安装，请查看：window系统下如何安装git 
+安装node.js:官网下载安装
+托管代码的网站：github或者gitcafe(天朝本土化的github)
+
+
+hexo基础命令讲解首先，下面的的代码将不再重复叙述，先把各个hexo 的基本命令介绍一下：
+1234$ hexo g  //完整命令为hexo generate,用于生成静态文件$ hexo s  //完整">
+<meta name="twitter:image" content="http://7xrkml.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160308215634.png">
+  
+    <link rel="alternative" href="/atom.xml" title="saltleaves" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">saltleaves</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/essay">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/摘抄/" style="font-size: 10px;">摘抄</a> <a href="/tags/模拟滚动条/" style="font-size: 10px;">模拟滚动条</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://ruolinxue.github.io/">kylin的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.ruanyifeng.com/home.html">阮一峰的个人网站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.zhangxinxu.com/">张鑫旭的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">saltleaves</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xre7u.com1.z0.glb.clouddn.com/psb.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">saltleaves</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/essay">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/vitaminc1" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-如何用hexo搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/06/如何用hexo搭建个人博客/" class="article-date">
+  	<time datetime="2016-03-06T13:32:17.000Z" itemprop="datePublished">2016-03-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何用hexo搭建个人博客
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
+<ul>
+<li>安装git:不会安装，请查看：<a href="http://saltleaves.github.io/2016/03/01/hello-world/" target="_blank" rel="external">window系统下如何安装git</a> </li>
+<li>安装node.js:官网下载安装</li>
+<li>托管代码的网站：github或者gitcafe(天朝本土化的github)</li>
+</ul>
+</blockquote>
+<h2 id="hexo基础命令讲解"><a href="#hexo基础命令讲解" class="headerlink" title="hexo基础命令讲解"></a>hexo基础命令讲解</h2><p>首先，下面的的代码将不再重复叙述，先把各个hexo 的基本命令介绍一下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ hexo g  <span class="comment">//完整命令为hexo generate,用于生成静态文件</span></div><div class="line">$ hexo s  <span class="comment">//完整命令为hexo server,用于启动服务器，主要用来本地预览（localhost:4000）</span></div><div class="line">$ hexo d  <span class="comment">//完整命令为hexo deploy,用于将本地文件发布到github上</span></div><div class="line">$ hexo n  <span class="comment">//完整命令为hexo new,用于新建一篇文章</span></div></pre></td></tr></table></figure>
+<h2 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h2><p>以下为正常情况下的安装流程，假如出现跟说好的不一样的情况，最后会有一部分的问题解答。</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在任意的地方鼠标右键，打开git bash输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<h3 id="下载网站所需文件"><a href="#下载网站所需文件" class="headerlink" title="下载网站所需文件"></a>下载网站所需文件</h3><p>创建放置博客文件的文件夹：hexo文件夹。在自己想要的位置创建文件夹，例如<strong>E:\hexo</strong>，当然最好不要放在中文路径下。之后进入文件夹，即<strong>E:\hexo</strong>内，点击鼠标右键，选择Git Bash，执行以下命令，Hexo会自动在该文件夹下下载搭建网站所需的所有文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
+<h3 id="下载依赖包"><a href="#下载依赖包" class="headerlink" title="下载依赖包"></a>下载依赖包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>可以先看看刚刚下载的hexo文件带来了什么，在E:\hexo内执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<h2 id="继续升级（选择主题）"><a href="#继续升级（选择主题）" class="headerlink" title="继续升级（选择主题）"></a>继续升级（选择主题）</h2><p>可以从知乎或者其他的地方选择自己喜欢的主题，并且下载下来，放置在themes文件夹下，下面是以默认主题为例的修改配置文件：</p>
+<ul>
+<li>博客的配置文件:在自己定义的目录（E:\hexo）的_config.yml</li>
+<li>主题的配置文件:E:\hexo\themes\landscape_config.yml</li>
+</ul>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><h3 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h3><p>已有的可以跳过，没有的，请<a href="https://github.com/" target="_blank" rel="external">在此</a>注册，这里就不介绍了</p>
+<h3 id="创建Repository"><a href="#创建Repository" class="headerlink" title="创建Repository"></a>创建Repository</h3><p> 需要注意的是Repository的名字，需要和你的github的账户名相同，由于我的已经创建过了，所以红色警告无须在意。<br><img src="http://7xrkml.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160308215634.png" alt="创建过程示例"></p>
+<h3 id="配置连接到github"><a href="#配置连接到github" class="headerlink" title="配置连接到github"></a>配置连接到github</h3><p>打开你刚刚创建的Repository，选择SSH，然后复制。<br><img src="http://7xrkml.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160308220147.png" alt="创建过程示例"><br>之后打开博客的配置文件_config.yml,一般是在最后，修改为以下代码，需要注意的是：后面要加空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:saltleaves/saltleaves.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<h3 id="推送到github"><a href="#推送到github" class="headerlink" title="推送到github"></a>推送到github</h3><pre><code>$ hexo g
+$ hexo d
+</code></pre><p>运行之后，我们就可以打开自己的网页查看了，网页名字即xxx.github.io(xxx为帐户名)      </p>
+<h2 id="跟说好的不一样呢"><a href="#跟说好的不一样呢" class="headerlink" title="跟说好的不一样呢"></a>跟说好的不一样呢</h2><p>问题：右键菜单中没有 git bash 选项</p>
+<blockquote>
+<ul>
+<li>进入开始菜单找到 git bash ，然后通过 cd 进入相应目录执行命令。</li>
+</ul>
+</blockquote>
+<p>问题：在github部署完成之后，马上访问可能出现404错误</p>
+<blockquote>
+<ul>
+<li>等待10分钟左右，查看邮箱是否有验证邮件</li>
+</ul>
+</blockquote>
+<p>问题：配置连接git后，出现error deployer not found:github 的错误</p>
+<blockquote>
+<ul>
+<li>这个问题常常出现在hexo阶段命令行与本文不一样的人，可以尝试使用本文中的方法</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/10/利用css模拟滚动条/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          利用css模拟滚动条
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'saltleaves'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		
+    	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
